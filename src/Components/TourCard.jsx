@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 //built the card with rendering and interaction 
 function TourCard({ id, name, info, price, image, onRemove }) {
   const [readMore, setReadMore] = useState(false);
-
+// The readMore state is used to toggle the display of the full info text
   const handleReadMore = () => {
     setReadMore(!readMore);
   };
@@ -26,5 +26,5 @@ function TourCard({ id, name, info, price, image, onRemove }) {
     </div>
   );
 }
-
+// The TourCard component receives props from the Gallery component and renders each tour card with its details
 export default TourCard;
