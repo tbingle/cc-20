@@ -6,18 +6,24 @@ body {
   background-color: #f8f9fa;
   color: #333;
   line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center; /* Center text inside the body */
 }
 
 /* Center the main content */
 main {
   max-width: 1200px;
-  margin: 0 auto; /* Centers the main container horizontally */
+  margin: 0 auto;
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers child elements horizontally */
+  align-items: center;
 }
 
+/* Header */
 h1 {
   text-align: center;
   margin-bottom: 2rem;
@@ -31,9 +37,10 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
-  color: #333; /* Ensure text is visible */
+  color: #333;
   transition: border-color 0.3s ease;
-  cursor: pointer; /* Indicate interactivity */
+  cursor: pointer;
+  min-width: 200px;
 }
 
 select:focus {
@@ -41,53 +48,39 @@ select:focus {
   outline: none;
 }
 
-/* Style the dropdown options */
 select option {
-  background-color: #fff; /* White background for options */
-  color: #333; /* Ensure text is visible */
+  background-color: #fff;
+  color: #333;
   padding: 0.5rem;
   cursor: pointer;
 }
 
-/* Add hover effect for options (if supported by the browser) */
 select option:hover {
-  background-color: #f0f0f0; /* Light gray background on hover */
+  background-color: #f0f0f0;
 }
 
-/* Center the dropdown selector */
 .mb-4.text-center {
+  width: 100%;
   display: flex;
-  justify-content: center; /* Centers the dropdown horizontally */
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
-/* Grid Layout */
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
+/* Gallery grid */
 .gallery {
   display: grid;
+  justify-content: center;
   gap: 1.5rem;
-  justify-content: center; /* Centers the grid items horizontally */
+  width: 100%;
 }
 
 @media (min-width: 640px) {
-  .sm\\:grid-cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 768px) {
-  .md\\:grid-cols-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -116,7 +109,7 @@ button:disabled {
   background-color: #ccc;
 }
 
-/* Tour Card Styles */
+/* Tour Card */
 .tour-card {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -124,6 +117,9 @@ button:disabled {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .tour-card:hover {
@@ -133,7 +129,7 @@ button:disabled {
 
 .tour-image {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
 }
 
