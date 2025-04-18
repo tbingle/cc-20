@@ -8,10 +8,14 @@ body {
   line-height: 1.6;
 }
 
+/* Center the main content */
 main {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Centers the main container horizontally */
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers child elements horizontally */
 }
 
 h1 {
@@ -22,17 +26,39 @@ h1 {
 
 /* Dropdown Selector */
 select {
-  font-size: 4rem;
+  font-size: 1rem;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
+  color: #333; /* Ensure text is visible */
   transition: border-color 0.3s ease;
+  cursor: pointer; /* Indicate interactivity */
 }
 
 select:focus {
   border-color: #007bff;
   outline: none;
+}
+
+/* Style the dropdown options */
+select option {
+  background-color: #fff; /* White background for options */
+  color: #333; /* Ensure text is visible */
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Add hover effect for options (if supported by the browser) */
+select option:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+/* Center the dropdown selector */
+.mb-4.text-center {
+  display: flex;
+  justify-content: center; /* Centers the dropdown horizontally */
+  margin-bottom: 2rem;
 }
 
 /* Grid Layout */
@@ -41,14 +67,28 @@ select:focus {
   gap: 1.5rem;
 }
 
+.gallery {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center; /* Centers the grid items horizontally */
+}
+
 @media (min-width: 640px) {
   .sm\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 768px) {
   .md\\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 }
